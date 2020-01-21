@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/homeItem"
+        android:title="@string/home"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/termItem"
+        android:title="@string/terms"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/courseItem"
+        android:title="@string/courses"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/assessmentItem"
+        android:title="@string/assessments"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/alertItem"
+        android:title="@string/alerts"
+        app:showAsAction="never" />
+</menu>

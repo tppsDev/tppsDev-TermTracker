@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <ImageView
+        android:id="@+id/courseDetailAssessmentRVAssessmentTypeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_performance_assessment"
+        android:contentDescription="@string/assessment_type_icon" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentRVAssessmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginStart="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/courseDetailAssessmentRVAssessmentTypeImageView"
+        app:layout_constraintTop_toTopOf="@+id/courseDetailAssessmentRVAssessmentTypeImageView" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentRVStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:text="@string/status_label"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/courseDetailAssessmentRVAssessmentTypeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetailAssessmentRVAssessmentTypeImageView" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentRVStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="end"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/courseDetailAssessmentRVStatusLabel"
+        app:layout_constraintTop_toTopOf="@+id/courseDetailAssessmentRVStatusLabel" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentGoalDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:text="@string/assessment_goal_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/courseDetailAssessmentRVStatusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetailAssessmentRVStatusLabel" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentRVAssessmentGoalDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="end"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/courseDetailAssessmentGoalDateLabel"
+        app:layout_constraintTop_toTopOf="@+id/courseDetailAssessmentGoalDateLabel" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentCourseEndDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="end"
+        android:text="@string/planned_end_date_label"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/courseDetailAssessmentGoalDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetailAssessmentGoalDateLabel" />
+
+    <TextView
+        android:id="@+id/courseDetailAssessmentRVCourseDueDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/courseDetailAssessmentRVAssessmentGoalDateTextView"
+        app:layout_constraintTop_toTopOf="@+id/courseDetailAssessmentCourseEndDateLabel" />
+
+    <View
+        android:id="@+id/courseDetailAssessmentRVDivider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetailAssessmentCourseEndDateLabel" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

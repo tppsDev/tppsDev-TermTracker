@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailActivity">
+
+    <include
+        android:id="@+id/noteDetailTermTrackerAppBar"
+        layout="@layout/term_tracker_app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noteDetailSubHeaderTextView"
+        style="@style/ActivitySubHeader"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteDetailTermTrackerAppBar" />
+
+    <TextView
+        android:id="@+id/noteDetailCourseTextView"
+        style="@style/InputFormItem"
+        android:background="@color/colorNeutralLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/noteDetailButtonBar" />
+
+    <LinearLayout
+        android:id="@+id/noteDetailButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="12dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/noteDetailSubHeaderTextView">
+
+        <ImageButton
+            android:id="@+id/noteDetailEditImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_edit_white_36"
+            android:contentDescription="@string/edit_note" />
+
+        <ImageButton
+            android:id="@+id/noteDetailDeleteImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_delete_white_36"
+            android:contentDescription="@string/delete_note" />
+
+        <ImageButton
+            android:id="@+id/noteDetailEmailImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_email_white_36dp"
+            android:contentDescription="@string/share_note"/>
+
+        <ImageButton
+            android:id="@+id/noteDetailTextImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_textsms_white_36dp"
+            android:contentDescription="@string/share_note"/>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/noteDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/noteDetailCourseTextView">
+
+        <TextView
+            android:id="@+id/noteDetailNoteTextView"
+            style="@style/InputFormItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

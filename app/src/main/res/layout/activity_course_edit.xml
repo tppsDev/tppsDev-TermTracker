@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorNeutralLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseEditActivity">
+
+    <TextView
+        android:id="@+id/editCourseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editCourseSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:text="@string/edit_course"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTitle" />
+
+    <TextView
+        android:id="@+id/editCourseTitleErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16sp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editCourseTitleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseSubHeader" />
+
+    <TextView
+        android:id="@+id/editCourseTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingVertical="5dp"
+        android:text="@string/course_name"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editCourseTitleErrorTextView" />
+
+    <EditText
+        android:id="@+id/editCourseTitleEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/course_name_hint"
+        android:inputType="text"
+        android:maxLength="50"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editCourseTitleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTitleLabel" />
+
+    <TextView
+        android:id="@+id/editCourseTermLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="5dp"
+        android:text="@string/term_relation_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editCourseTitleEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTitleEditText" />
+
+    <TextView
+        android:id="@+id/editCourseTermErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseTitleEditText"
+        app:layout_constraintStart_toEndOf="@+id/editCourseTermLabel"
+        app:layout_constraintTop_toTopOf="@+id/editCourseTermLabel" />
+
+    <Spinner
+        android:id="@+id/editCourseTermSpinner"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:prompt="@string/term_prompt"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseTermErrorTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editCourseTermLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTermLabel" />
+
+    <TextView
+        android:id="@+id/editCourseStartDateErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseTitleEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editCourseStartDateLabel"
+        app:layout_constraintTop_toTopOf="@+id/editCourseStartDateLabel" />
+
+    <TextView
+        android:id="@+id/editCourseStartDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="5dp"
+        android:text="@string/start_date_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editCourseTermLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseTermSpinner" />
+
+    <EditText
+        android:id="@+id/editCourseStartDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/date_hint"
+        android:inputType="date"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editCourseStartDatePickerImageButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editCourseStartDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStartDateLabel" />
+
+    <ImageButton
+        android:id="@+id/editCourseStartDatePickerImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/date_picker"
+        android:src="@drawable/ic_date_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/editCourseStartDateEditText"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseStartDateErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editCourseStartDateEditText" />
+
+    <TextView
+        android:id="@+id/editCourseEndDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="5dp"
+        android:text="@string/end_date_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editCourseStartDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStartDateEditText" />
+
+    <TextView
+        android:id="@+id/editCourseEndDateErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseStartDatePickerImageButton"
+        app:layout_constraintStart_toStartOf="@+id/editCourseStartDateErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editCourseEndDateLabel" />
+
+    <EditText
+        android:id="@+id/editCourseEndDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/date_hint"
+        android:inputType="date"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editCourseEndDatePickerImageButton"
+        app:layout_constraintStart_toStartOf="@+id/editCourseEndDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseEndDateLabel" />
+
+    <ImageButton
+        android:id="@+id/editCourseEndDatePickerImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/date_picker"
+        android:src="@drawable/ic_date_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/editCourseEndDateEditText"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseEndDateErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editCourseEndDateEditText" />
+
+    <TextView
+        android:id="@+id/editCourseStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="5dp"
+        android:text="@string/status_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editCourseEndDateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseEndDateEditText" />
+
+    <TextView
+        android:id="@+id/editCourseStatusErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseEndDatePickerImageButton"
+        app:layout_constraintStart_toEndOf="@+id/editCourseStatusLabel"
+        app:layout_constraintTop_toTopOf="@+id/editCourseStatusLabel" />
+
+    <Spinner
+        android:id="@+id/editCourseStatusSpinner"
+        android:layout_width="382dp"
+        android:layout_height="31dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:entries="@array/course_status_array"
+        android:prompt="@string/status_label"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseEndDatePickerImageButton"
+        app:layout_constraintStart_toStartOf="@+id/editCourseStatusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStatusLabel" />
+
+    <Button
+        android:id="@+id/editCourseCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/editCourseSubmitBtn"
+        app:layout_constraintTop_toTopOf="@+id/editCourseSubmitBtn" />
+
+    <Button
+        android:id="@+id/editCourseSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/editCourseEndDatePickerImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/editCourseStatusSpinner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

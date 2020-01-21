@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CourseAlertEditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/courseAlertEditPageTitle"
+            style="@style/ActivityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/courseAlertEditSubHeader"
+            style="@style/ActivitySubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_course_alert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditPageTitle" />
+
+        <View
+            android:id="@+id/courseAlertEditBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorNeutralLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditSubHeader"/>
+
+        <TextView
+            android:id="@+id/courseAlertEditCourseTextView"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditSubHeader" />
+
+        <TextView
+            android:id="@+id/courseAlertEditDateLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_date_label"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditCourseTextView"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditCourseTextView" />
+
+        <TextView
+            android:id="@+id/courseAlertEditDateErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courseAlertEditDateLabel"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditDateLabel" />
+
+        <EditText
+            android:id="@+id/courseAlertEditDateEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/courseAlertEditDateImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditDateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditDateLabel" />
+
+        <ImageButton
+            android:id="@+id/courseAlertEditDateImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/courseAlertEditDateEditText"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditDateErrorTextView"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditDateEditText"
+            android:contentDescription="@string/alert_date_picker" />
+
+        <TextView
+            android:id="@+id/courseAlertEditTimeLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_time_label"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditDateEditText"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditDateEditText" />
+
+        <TextView
+            android:id="@+id/courseAlertEditTimeErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditDateImageBtn"
+            app:layout_constraintStart_toEndOf="@+id/courseAlertEditTimeLabel"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditTimeLabel" />
+
+        <EditText
+            android:id="@+id/courseAlertEditTimeEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/time_hint"
+            android:inputType="time"
+            app:layout_constraintEnd_toStartOf="@+id/courseAlertEditTimeImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditTimeLabel" />
+
+        <ImageButton
+            android:id="@+id/courseAlertEditTimeImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_time_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/courseAlertEditTimeEditText"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditDateImageBtn"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditTimeEditText"
+            android:contentDescription="@string/alert_time_picker" />
+
+        <TextView
+            android:id="@+id/courseAlertEditMessageLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_message_label"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditTimeEditText"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditTimeEditText" />
+
+        <TextView
+            android:id="@+id/courseAlertEditMessageErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditTimeImageBtn"
+            app:layout_constraintStart_toEndOf="@+id/courseAlertEditMessageLabel"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditMessageLabel" />
+
+        <EditText
+            android:id="@+id/courseAlertEditMessageEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/alert_message_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditTimeImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/courseAlertEditMessageLabel"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditMessageLabel" />
+
+        <Button
+            android:id="@+id/courseAlertEditCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/cancel"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toStartOf="@+id/courseAlertEditSetAlertBtn"
+            app:layout_constraintTop_toBottomOf="@+id/courseAlertEditMessageEditText" />
+
+        <Button
+            android:id="@+id/courseAlertEditSetAlertBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/set_alert"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@+id/courseAlertEditTimeImageBtn"
+            app:layout_constraintTop_toTopOf="@+id/courseAlertEditCancelBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

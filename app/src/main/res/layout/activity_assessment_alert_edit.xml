@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AssessmentAlertEditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/assessmentAlertEditPageTitle"
+            style="@style/ActivityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditSubHeader"
+            style="@style/ActivitySubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_assessment_alert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditPageTitle" />
+
+        <View
+            android:id="@+id/assessmentAlertEditBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorNeutralLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditSubHeader"/>
+
+        <TextView
+            android:id="@+id/assessmentAlertEditAssessmentTextView"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditSubHeader" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditDateLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_date_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditAssessmentTextView"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditAssessmentTextView" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditDateErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/assessmentAlertEditDateLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditDateLabel" />
+
+        <EditText
+            android:id="@+id/assessmentAlertEditDateEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/assessmentAlertEditDateImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditDateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditDateLabel" />
+
+        <ImageButton
+            android:id="@+id/assessmentAlertEditDateImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/assessmentAlertEditDateEditText"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditDateErrorTextView"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditDateEditText"
+            android:contentDescription="@string/alert_date_picker" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditTimeLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_time_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditDateEditText"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditDateEditText" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditTimeErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditDateImageBtn"
+            app:layout_constraintStart_toEndOf="@+id/assessmentAlertEditTimeLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditTimeLabel" />
+
+        <EditText
+            android:id="@+id/assessmentAlertEditTimeEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/time_hint"
+            android:inputType="time"
+            app:layout_constraintEnd_toStartOf="@+id/assessmentAlertEditTimeImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditTimeLabel" />
+
+        <ImageButton
+            android:id="@+id/assessmentAlertEditTimeImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_time_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/assessmentAlertEditTimeEditText"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditDateImageBtn"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditTimeEditText"
+            android:contentDescription="@string/alert_time_picker" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditMessageLabel"
+            style="@style/InputFormItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/alert_message_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditTimeEditText"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditTimeEditText" />
+
+        <TextView
+            android:id="@+id/assessmentAlertEditMessageErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditTimeImageBtn"
+            app:layout_constraintStart_toEndOf="@+id/assessmentAlertEditMessageLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditMessageLabel" />
+
+        <EditText
+            android:id="@+id/assessmentAlertEditMessageEditText"
+            style="@style/InputFormItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/alert_message_hint"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditTimeImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/assessmentAlertEditMessageLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditMessageLabel" />
+
+        <Button
+            android:id="@+id/assessmentAlertEditCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/cancel"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toStartOf="@+id/assessmentAlertEditSetAlertBtn"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentAlertEditMessageEditText" />
+
+        <Button
+            android:id="@+id/assessmentAlertEditSetAlertBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/set_alert"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentAlertEditTimeImageBtn"
+            app:layout_constraintTop_toTopOf="@+id/assessmentAlertEditCancelBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

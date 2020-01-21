@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MentorEditActivity">
+
+    <TextView
+        android:id="@+id/mentorEditTitleBar"
+        style="@style/ActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mentorEditSubHeader"
+        style="@style/ActivitySubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_mentor"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditTitleBar" />
+
+    <View
+        android:id="@+id/mentorEditBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorNeutralLight"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditSubHeader"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/mentorEditFirstNameLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/first_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditSubHeader" />
+
+    <TextView
+        android:id="@+id/mentorEditFirstNameErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mentorEditFirstNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/mentorEditFirstNameLabel" />
+
+    <EditText
+        android:id="@+id/mentorEditFirstNameEditText"
+        style="@style/InputFormItem"
+        android:background="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/mentorEditFirstNameErrorTextView"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditFirstNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditFirstNameLabel"
+        android:autofillHints=""
+        android:hint="@string/first_name_hint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/mentorEditLastNameLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/last_name_label"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditFirstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditFirstNameEditText" />
+
+    <TextView
+        android:id="@+id/mentorEditLastNameErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mentorEditLastNameLabel"
+        app:layout_constraintTop_toTopOf="@+id/mentorEditLastNameLabel" />
+
+    <EditText
+        android:id="@+id/mentorEditLastNameEditText"
+        style="@style/InputFormItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/mentorEditLastNameErrorTextView"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditLastNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditLastNameLabel"
+        android:autofillHints=""
+        android:hint="@string/last_name_hint"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/mentorEditEmailLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/email_label"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditLastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditLastNameEditText" />
+
+    <TextView
+        android:id="@+id/mentorEditEmailErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mentorEditEmailLabel"
+        app:layout_constraintTop_toTopOf="@+id/mentorEditEmailLabel" />
+
+    <EditText
+        android:id="@+id/mentorEditEmailEditText"
+        style="@style/InputFormItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/mentorEditEmailErrorTextView"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditEmailLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditEmailLabel" />
+
+    <TextView
+        android:id="@+id/mentorEditPhoneLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/phone_label"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditEmailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditEmailEditText" />
+
+    <TextView
+        android:id="@+id/mentorEditPhoneErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mentorEditPhoneLabel"
+        app:layout_constraintTop_toTopOf="@+id/mentorEditPhoneLabel" />
+
+    <EditText
+        android:id="@+id/mentorEditPhoneEditText"
+        style="@style/InputFormItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/phone_hint"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/mentorEditPhoneErrorTextView"
+        app:layout_constraintStart_toStartOf="@+id/mentorEditPhoneLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditPhoneErrorTextView" />
+
+    <Button
+        android:id="@+id/mentorEditCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/mentorEditSubmitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mentorEditPhoneEditText" />
+
+    <Button
+        android:id="@+id/mentorEditSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/mentorEditPhoneEditText"
+        app:layout_constraintTop_toTopOf="@+id/mentorEditCancelBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

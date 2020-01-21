@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AssessmentEditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/assessmentEditTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/assessmentEditSubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="@string/edit_assessment"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditTitleBar" />
+
+        <View
+            android:id="@+id/assessmentEditBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorNeutralLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditSubHeader" />
+
+        <TextView
+            android:id="@+id/assessmentEditTitleLabel"
+            style="@style/AssessmentEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/assessment_name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditSubHeader" />
+
+        <TextView
+            android:id="@+id/assessmentEditTitleErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/assessmentEditTitleLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditTitleLabel" />
+
+        <EditText
+            android:id="@+id/assessmentEditTitleEditText"
+            style="@style/AssessmentEditItem"
+            android:background="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditTitleLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditTitleLabel"
+            android:inputType="text"
+            android:autofillHints=""
+            android:hint="@string/assessment_name"/>
+
+        <RadioGroup
+            android:id="@+id/assessmentEditTypeRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditTitleEditText">
+
+            <RadioButton
+                android:id="@+id/assessmentEditObjectiveRadioBtn"
+                style="@style/AssessmentEditItem"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/objective" />
+
+            <RadioButton
+                android:id="@+id/assessmentEditPerformanceRadioBtn"
+                android:layout_marginStart="12dp"
+                style="@style/AssessmentEditItem"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/performance"
+                android:checked="false"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/assessmentEditCourseLabel"
+            style="@style/AssessmentEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/course_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditTypeRadioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditTypeRadioGroup" />
+
+        <TextView
+            android:id="@+id/assessmentEditCourseErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/assessmentEditCourseLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditCourseLabel" />
+
+        <Spinner
+            android:id="@+id/assessmentEditCourseSpinner"
+            style="@style/AssessmentEditItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:prompt="@string/course_prompt"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditCourseLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditCourseLabel" />
+
+        <TextView
+            android:id="@+id/assessmentEditCourseDatesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditCourseSpinner"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditCourseSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditCourseSpinner" />
+
+        <TextView
+            android:id="@+id/assessmentEditGoalDateLabel"
+            style="@style/AssessmentEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/goal_date"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditCourseDatesTextView"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditCourseDatesTextView" />
+
+        <TextView
+            android:id="@+id/assessmentEditGoalDateErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/assessmentEditGoalDateLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditGoalDateLabel" />
+
+        <EditText
+            android:id="@+id/assessmentEditGoalDateEditText"
+            style="@style/AssessmentEditItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:hint="@string/date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/assessmentEditGoalDatePickerImageBtn"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditGoalDateLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditGoalDateLabel" />
+
+        <ImageButton
+            android:id="@+id/assessmentEditGoalDatePickerImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/date_picker"
+            android:src="@drawable/ic_date_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/assessmentEditGoalDateEditText"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditCourseDatesTextView"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditGoalDateEditText" />
+
+        <TextView
+            android:id="@+id/assessmentEditStatusLabel"
+            style="@style/AssessmentEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/status_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditGoalDateEditText"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditGoalDateEditText" />
+
+        <TextView
+            android:id="@+id/assessmentEditStatusErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/assessmentEditStatusLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditStatusLabel" />
+
+        <Spinner
+            android:id="@+id/assessmentEditStatusSpinner"
+            style="@style/AssessmentEditItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="180dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:prompt="@string/status_prompt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditStatusLabel"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditStatusLabel" />
+
+        <TextView
+            android:id="@+id/assessmentEditDescriptionLabel"
+            style="@style/AssessmentEditItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/description_label"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditStatusSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditStatusSpinner" />
+
+        <TextView
+            android:id="@+id/assessmentEditDescriptionErrorTextView"
+            style="@style/InputFormErrorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/assessmentEditDescriptionLabel"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditDescriptionLabel" />
+
+        <EditText
+            android:id="@+id/assessmentEditDescriptionEditText"
+            style="@style/AssessmentEditItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:autofillHints=""
+            android:background="@color/colorWhite"
+            android:gravity="top"
+            android:hint="@string/assessment_description_hint"
+            android:inputType="textLongMessage"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditGoalDatePickerImageBtn"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/assessmentEditStatusSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditDescriptionLabel"/>
+
+        <Button
+            android:id="@+id/assessmentEditCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toStartOf="@+id/assessmentEditSubmitBtn"
+            app:layout_constraintTop_toTopOf="@+id/assessmentEditSubmitBtn" />
+
+        <Button
+            android:id="@+id/assessmentEditSubmitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/submit"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@+id/assessmentEditDescriptionEditText"
+            app:layout_constraintTop_toBottomOf="@+id/assessmentEditDescriptionEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainTermDashBoard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/colorNeutralLight"
+    android:orientation="horizontal">
+
+    <include
+        android:id="@+id/timeRemainingDashboardItem"
+        layout="@layout/time_remaining_dashboard_item"/>
+
+    <include
+        android:id="@+id/coursesRemainingDashboardItem"
+        layout="@layout/courses_remaining_dashboard_item"/>
+
+    <include
+        android:id="@+id/assessmentsRemainingDashboardItem"
+        layout="@layout/assessments_remaining_dashboard_item"/>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlertActivity">
+
+    <include
+        android:id="@+id/alertTermTrackerAppBar"
+        layout="@layout/term_tracker_app_bar"/>
+
+    <TextView
+        android:id="@+id/alertSubHeaderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ActivitySubHeader" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RecyclerViewHeader"
+                android:text="@string/course_alerts"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alertCourseAlertRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RecyclerViewHeader"
+                android:text="@string/assessment_alerts"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alertAssessmentAlertRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

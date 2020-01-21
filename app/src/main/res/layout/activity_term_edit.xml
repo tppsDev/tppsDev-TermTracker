@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorNeutralLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermEditActivity">
+
+    <TextView
+        android:id="@+id/editTermTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editTermSubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:text="@string/edit_term"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTermTitle" />
+
+    <TextView
+        android:id="@+id/editTermTitleErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTermSubHeader" />
+
+
+    <TextView
+        android:id="@+id/editTermTitleLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="5dp"
+        android:text="@string/term_name_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTermTitleErrorTextView" />
+
+    <EditText
+        android:id="@+id/editTermTitleEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:maxLength="25"
+        android:hint="@string/term_name_hint"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTermTitleErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editTermTitleLabelTextView" />
+
+    <TextView
+        android:id="@+id/editTermStartDateErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editTermTitleEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editTermTitleEditText" />
+
+    <TextView
+        android:id="@+id/editTextStartDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/start_date_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTermTitleLabelTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTermStartDateErrorTextView" />
+
+    <EditText
+        android:id="@+id/editTermStartDateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/colorWhite"
+        android:hint="@string/date_hint"
+        android:inputType="date"
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTermStartDatePickerImageButton"
+        app:layout_constraintStart_toStartOf="@+id/editTermStartDateErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editTextStartDateTextView" />
+
+    <ImageButton
+        android:id="@+id/editTermStartDatePickerImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_date_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/editTermStartDateEditText"
+        app:layout_constraintEnd_toEndOf="@+id/editTermTitleEditText"
+        app:layout_constraintTop_toTopOf="@+id/editTermStartDateEditText"
+        android:contentDescription="@string/date_picker" />
+
+    <TextView
+        android:id="@+id/editTermEndDateErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorErrorRed"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editTermStartDateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editTermStartDateEditText" />
+
+    <TextView
+        android:id="@+id/editTextEndDateLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:text="@string/end_date_label"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextStartDateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTermEndDateErrorTextView" />
+
+    <TextView
+        android:id="@+id/editTermEndDateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:paddingVertical="5dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTermStartDateEditText"
+        app:layout_constraintStart_toStartOf="@+id/editTermEndDateErrorTextView"
+        app:layout_constraintTop_toTopOf="@+id/editTextEndDateLabelTextView" />
+
+    <Button
+        android:id="@+id/editTermCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/editTermSubmitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEndDateLabelTextView" />
+
+    <Button
+        android:id="@+id/editTermSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/editTermTitleEditText"
+        app:layout_constraintTop_toTopOf="@+id/editTermCancelBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

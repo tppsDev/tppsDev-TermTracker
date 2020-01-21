@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteEditActivity">
+
+    <TextView
+        android:id="@+id/noteEditTitle"
+        style="@style/ActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noteEditSubHeaderTextView"
+        style="@style/ActivitySubHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditTitle" />
+
+    <View
+        android:id="@+id/noteEditBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorNeutralLight"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditSubHeaderTextView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/noteEditTitleLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/note_title_label"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditSubHeaderTextView" />
+
+    <TextView
+        android:id="@+id/noteEditTitleErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/noteEditTitleLabel"
+        app:layout_constraintTop_toTopOf="@+id/noteEditTitleLabel" />
+
+    <EditText
+        android:id="@+id/noteEditTitleEditText"
+        style="@style/InputFormItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorWhite"
+        android:autofillHints=""
+        android:hint="@string/note_title_hint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/noteEditTitleErrorTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/noteEditTitleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditTitleLabel" />
+
+    <TextView
+        android:id="@+id/noteEditNoteLabel"
+        style="@style/InputFormItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="@string/note_label"
+        app:layout_constraintStart_toStartOf="@+id/noteEditTitleEditText"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditTitleEditText" />
+
+    <TextView
+        android:id="@+id/noteEditNoteErrorTextView"
+        style="@style/InputFormErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/noteEditNoteLabel"
+        app:layout_constraintTop_toTopOf="@+id/noteEditNoteLabel" />
+
+    <EditText
+        android:id="@+id/noteEditNoteEditText"
+        style="@style/InputFormItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="250dp"
+        android:autofillHints=""
+        android:gravity="top"
+        android:background="@color/colorWhite"
+        android:hint="@string/note_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/noteEditBackground"
+        app:layout_constraintEnd_toEndOf="@+id/noteEditNoteErrorTextView"
+        app:layout_constraintStart_toStartOf="@+id/noteEditNoteLabel"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditNoteLabel" />
+
+    <Button
+        android:id="@+id/noteEditCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toStartOf="@+id/noteEditSubmitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditNoteEditText" />
+
+    <Button
+        android:id="@+id/noteEditSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/noteEditNoteEditText"
+        app:layout_constraintTop_toTopOf="@+id/noteEditCancelBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

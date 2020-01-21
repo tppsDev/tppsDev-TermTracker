@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccentGold</item>
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+
+    <style name="OverFlow">
+        <item name="android:src">@drawable/ic_menu_icon_white</item>
+    </style>
+
+    <style name="DashboardItem">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:paddingVertical">2dp</item>
+        <item name="android:background">@color/colorNeutralLight</item>
+    </style>
+
+    <style name="DarkButton">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_marginHorizontal">10dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TermRVDateItem">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+    </style>
+
+    <style name="TermDetailDateItem">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+    </style>
+
+    <style name="AssessmentActivityRVText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="AssessmentDetailItem">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AssessmentEditItem">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
+    </style>
+
+    <style name="InputFormErrorTextView">
+        <item name="android:textColor">@color/colorErrorRed</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
+    </style>
+
+    <style name="ActivityTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/app_name</item>
+    </style>
+
+    <style name="ActivitySubHeader">
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="InputFormItem">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="RecyclerViewHeader">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="AlertRecyclerViewItem">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

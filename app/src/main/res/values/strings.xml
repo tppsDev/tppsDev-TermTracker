@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">Term Tracker</string>
+    <string name="courses_remaining_label">Courses\nRemaining</string>
+    <string name="assessments_remaining_label">Assessments\nRemaining</string>
+    <string name="current_term_label">Current Term:</string>
+    <string name="current_courses_label">Current Courses:</string>
+    <string name="upcoming_assessments_label">Upcoming Assessments:</string>
+    <string name="start_date_label">Start Date:</string>
+    <string name="planned_end_date_label">Planned End Date:</string>
+    <string name="performance_label">Performance</string>
+    <string name="assessment_goal_date">Assessment Goal Date:</string>
+    <string name="no_courses">No Courses</string>
+    <string name="no_assessment">No Assessments</string>
+    <string name="months_remaining">Months\nRemaining</string>
+    <string name="weeks_remaining">Weeks\nRemaining</string>
+    <string name="days_remaining">Days\nRemaining</string>
+    <string name="database_name">term_tracker.db</string>
+    <string name="user_setup">User Setup</string>
+    <string name="user_name_label">Name:</string>
+    <string name="name_hint">Enter name to be displayed on screen</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="valid_name_error">Please enter a valid name</string>
+    <string name="user_name_key">UserName</string>
+    <string name="user_updated">User Updated</string>
+    <string name="title_activity_term">TermActivity</string>
+    <string name="home">Home</string>
+    <string name="terms">Terms</string>
+    <string name="courses">Courses</string>
+    <string name="assessments">Assessments</string>
+    <string name="alerts">Alerts</string>
+    <string name="starts">Starts:</string>
+    <string name="ends">Ends:</string>
+    <string name="enrolled_courses">Enrolled Courses:</string>
+    <string name="no_terms">No Terms</string>
+    <string name="term_id_key">TERM_ID</string>
+    <string name="edit_term">Edit Term</string>
+    <string name="term_name_label">Term Name:</string>
+    <string name="date_hint">M/D/YYYY</string>
+    <string name="term_name_hint">Term name</string>
+    <string name="end_date_label">End Date:</string>
+    <string name="term_object_key">TERM_OBJECT</string>
+    <string name="date_picker">DatePicker</string>
+    <string name="term_name_required">Term Name Required</string>
+    <string name="edit_term_mode_key">EDIT_TERM_MODE</string>
+    <string name="enter_valid_date">Please enter a valid date (MM/DD/YYYY)</string>
+    <string name="term_date_overlap">Date overlaps existing term</string>
+    <string name="edit_course">Edit Course</string>
+    <string name="course_name">Course Name:</string>
+    <string name="course_name_hint">Course name</string>
+    <string name="term_relation_label">Term:</string>
+    <string name="edit_course_mode_key">EDIT_COURSE_MODE</string>
+    <string name="course_object_key">COURSE_OBJECT</string>
+    <string name="status_label">Status:</string>
+    <string name="status_prompt">Select Status</string>
+    <string name="term_prompt">Select Term</string>
+    <string name="course_name_required">Course name required</string>
+    <string name="date_not_in_term">Date must be within term</string>
+    <string name="term_required">Please select a term</string>
+    <string name="status_required">Please select a status</string>
+    <string name="start_date_after_end_date">Start date must be before end date</string>
+    <string name="end_date_before_start_date">End date must be after start date</string>
+    <string name="assessment_type_icon">Assessment Type Icon</string>
+    <string name="no_notes">No notes</string>
+    <string name="mentors_btn_label">View\nMentors</string>
+    <string name="mentors_btn_label_land">View Mentors</string>
+    <string name="view_mentors_button_desc">View Mentors Button</string>
+    <string name="assessments_label">Assessments:</string>
+    <string name="course_notes_label">Course Notes:</string>
+    <string name="course_id_key">COURSE_ID</string>
+    <string name="course_end_date">Course End Date:</string>
+    <string name="assessment_id_key">ASSESSMENT_ID</string>
+    <string name="edit_assessment">Edit Assessment</string>
+    <string name="assessment_name_label">Assessment:</string>
+    <string name="assessment_name">Assessment name</string>
+    <string name="edit_assessment_mode_key">EDIT_ASSESSMENT_MODE</string>
+    <string name="objective">Objective</string>
+    <string name="performance">Performance</string>
+    <string name="course_prompt">Select course</string>
+    <string name="course_label">Course:</string>
+    <string name="goal_date">Goal Date:</string>
+    <string name="description_label">Description:</string>
+    <string name="assessment_description_hint">Assessment note . . .</string>
+    <string name="course_required">Please select a course</string>
+    <string name="assessment_object_key">ASSESSMENT_OBJECT</string>
+    <string name="goal_date_not_within_course_dates">Goal date must be within course dates</string>
+    <string name="assessment_name_required">Assessment name required</string>
+    <string name="description_required">Description required</string>
+    <string name="edit_assessment_alert">Edit Assessment Alert</string>
+    <string name="alert_date_label">Alert Date:</string>
+    <string name="alert_time_label">Alert Time:</string>
+    <string name="alert_date_picker">Alert Date Picker</string>
+    <string name="time_hint">h:mmAM/PM</string>
+    <string name="alert_time_picker">Alert time picker</string>
+    <string name="set_alert">Set Alert</string>
+    <string name="edit_course_alert">Edit Course Alert</string>
+    <string name="alert_message_label">Alert Message:</string>
+    <string name="alert_message_hint">Alert message</string>
+    <string name="edit_assessment_alert_mode_key">EDIT_ASSESSMENT_ALERT_MODE</string>
+    <string name="assessment_alert_object_key">ASSESSMENT_ALERT_OBJECT</string>
+    <string name="message_required">Message required</string>
+    <string name="alert_after_goal_date">Alert is after assessment goal date</string>
+    <string name="enter_valid_time">Please enter a valid time (h:mmAM/PM)</string>
+    <string name="edit_course_alert_mode_key">EDIT_COURSE_ALERT_MODE</string>
+    <string name="course_alert_object_key">COURSE_ALERT_OBJECT</string>
+    <string name="course_alerts">Course Alerts</string>
+    <string name="assessment_alerts">Assessment Alerts</string>
+    <string name="no_alerts">No Alerts</string>
+    <string name="edit_course_note">Edit Course Note</string>
+    <string name="note_title_label">Note Title:</string>
+    <string name="note_title_hint">Note title</string>
+    <string name="note_label">Note:</string>
+    <string name="note_hint">Enter note…</string>
+    <string name="edit_note_mode_key">EDIT_NOTE_MODE</string>
+    <string name="note_object_key">NOTE_OBJECT</string>
+    <string name="note_title_required">Please enter note title</string>
+    <string name="note_body_required">Note body required</string>
+    <string name="edit_note">Edit note</string>
+    <string name="delete_note">Delete note</string>
+    <string name="share_note">Share note</string>
+    <string name="note_id_key">NOTE_ID</string>
+    <string name="edit_mentor">Edit Mentor</string>
+    <string name="first_name_label">First Name:</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="email_label">Email:</string>
+    <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="email_hint">email@domain.com</string>
+    <string name="phone_label">Phone:</string>
+    <string name="phone_hint">555-555-5555</string>
+    <string name="mentor_object_key">MENTOR_OBJECT</string>
+    <string name="edit_mentor_mode_key">EDIT_MENTOR_MODE</string>
+    <string name="mentor_id_key">MENTOR_ID</string>
+    <string name="first_name_reuired">First name required</string>
+    <string name="last_name_required">Last name required</string>
+    <string name="email_required">Email required</string>
+    <string name="phone_required">Phone required</string>
+    <string name="enter_valid_email">Please enter a valid email</string>
+    <string name="enter_valid_phone">Please enter a valid phone number</string>
+    <string name="select_mentor_label">Select Mentor</string>
+    <string name="no_mentors">No Mentors</string>
+    <string name="course_with_mentors_object_key">COURSE_WITH_MENTORS_OBJECT</string>
+    <string name="alert_title_key">ALERT_TITLE</string>
+    <string name="alert_message_key">ALERT_MESSAGE</string>
+    <string name="termtracker_assessment_alert">TermTracker Assessment Alert</string>
+    <string name="alert_id_key">ALERT_ID</string>
+    <string name="no_alarm_mgr_error">Android error: No alarm manager installed</string>
+    <string name="delete_term_with_courses_error">Cannot delete term with courses associated</string>
+    <string name="termtracker_course_alert">TermTracker Course Alert</string>
+    <string name="delete_assessment_with_alert_error">Cannot delete assessment with alerts associated</string>
+    <string name="delete_mentor_with_course_error">Cannot delete mentor associated with course</string>
+    <string name="_label_land">Add Alert</string>
+    <string name="add_alert_label_land">Add Alert</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string-array name="course_status_array">
+        <item>Plan to take</item>
+        <item>In progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+    </string-array>
+
+    <string-array name="assessment_status_array">
+        <item>Not Scheduled</item>
+        <item>Scheduled</item>
+        <item>Submitted</item>
+        <item>Passed</item>
+        <item>Failed</item>
+    </string-array>
+
+    <string-array name="assessment_type_array">
+        <item>Objective</item>
+        <item>Performance</item>
+    </string-array>
+</resources>

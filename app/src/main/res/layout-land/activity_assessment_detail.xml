@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentDetailActivity">
+
+    <include
+        android:id="@+id/assessmentDetailTermTrackerAppBar"
+        layout="@layout/term_tracker_app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assessmentDetailTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="18dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailTermTrackerAppBar" />
+
+    <View
+        android:id="@+id/assessmentDetailGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorNeutralLight"
+        app:layout_constraintBottom_toBottomOf="@+id/assessmentDetailAddAlertFab"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailTitleTextView" />
+
+    <ImageView
+        android:id="@+id/assessmentDetailTypeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/assessment_type_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/assessmentDetailCourseTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/assessmentDetailCourseTextView"
+        app:srcCompat="@drawable/ic_performance_assessment" />
+
+    <TextView
+        android:id="@+id/assessmentDetailCourseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/assessmentDetailGroup"
+        app:layout_constraintStart_toEndOf="@+id/assessmentDetailTypeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailTitleTextView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/assessmentDetailEditFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_edit_white"
+        app:layout_constraintEnd_toEndOf="@+id/assessmentDetailAddNoteFab"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailTitleTextView" />
+
+    <TextView
+        android:id="@+id/assessmentDetailStatusLabel"
+        style="@style/AssessmentDetailItem"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/status_label"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailTypeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailGroup" />
+
+    <TextView
+        android:id="@+id/assessmentDetailStatusTextView"
+        style="@style/AssessmentDetailItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailStatusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailStatusLabel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/assessmentDetailAddAlertFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_add_alert_white"
+        app:layout_constraintEnd_toStartOf="@+id/assessmentDetailEditFab"
+        app:layout_constraintTop_toTopOf="@+id/assessmentDetailEditFab" />
+
+    <TextView
+        android:id="@+id/assessmentDetailGoalDateLabel"
+        style="@style/AssessmentDetailItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assessment_goal_date"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/assessmentDetailStatusLabel" />
+
+    <TextView
+        android:id="@+id/assessmentDetailGoalDateTextView"
+        style="@style/AssessmentDetailItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailGoalDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailGoalDateLabel" />
+
+    <TextView
+        android:id="@+id/assessmentDetailCourseEndDateLabel"
+        style="@style/AssessmentDetailItem"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/course_end_date"
+        app:layout_constraintEnd_toEndOf="@+id/assessmentDetailAddNoteFab"
+        app:layout_constraintTop_toTopOf="@+id/assessmentDetailGoalDateLabel" />
+
+    <TextView
+        android:id="@+id/assessmentDetailCourseEndDateTextView"
+        style="@style/AssessmentDetailItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailCourseEndDateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailCourseEndDateLabel" />
+
+    <TextView
+        android:id="@+id/assessmentDetailDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailStatusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailStatusTextView" />
+
+    <View
+        android:id="@+id/assessmentDetailNoteTopBorder"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailDescriptionTextView" />
+
+    <TextView
+        android:id="@+id/assessmentDetailNotesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/course_notes_label"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/assessmentDetailAddNoteFab"
+        app:layout_constraintStart_toStartOf="@+id/assessmentDetailStatusLabel"
+        app:layout_constraintTop_toTopOf="@+id/assessmentDetailAddNoteFab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/assessmentDetailAddNoteFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailNoteTopBorder"
+        app:srcCompat="@drawable/ic_add_white" />
+
+    <View
+        android:id="@+id/assessmentDetailNoteBottomBorder"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailAddNoteFab" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assessmentDetailNoteRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessmentDetailNoteBottomBorder"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
